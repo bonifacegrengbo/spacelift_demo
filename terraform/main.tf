@@ -2,6 +2,11 @@ terraform {
   required_version = ">= 1.0"
 }
 
+variable "aws_region" {
+  description = "AWS region to deploy into"
+  type        = string
+  default     = "us-west-2"
+}
 
 # Generate SSH key pair
 resource "tls_private_key" "demo_key" {
